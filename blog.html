@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Blog - Hitome</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			background-color: #1e1e1e;
+			color: #fff;
+			font-family: sans-serif;
+		}
+
+		.container {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+			perspective: 1000px;
+		}
+		
+		.button {
+			display: inline-block;
+			padding: 20px;
+			margin: 20px;
+			background-color: #D26466;
+			border: 2px solid #444;
+			color: #fff;
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: transform 0.3s;
+			transform-style: preserve-3d;
+			transform-origin: center;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+			position: relative;
+		}
+
+		.button:before {
+			content: "";
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			right: -2px;
+			bottom: -2px;
+			background-color: rgba(255,255,255,0.1);
+			z-index: -1;
+			border-radius: 5px;
+			transition: all 0.3s ease-in-out;
+			opacity: 0;
+			transform: scale(0.5);
+		}
+
+		.button:hover:before {
+			opacity: 1;
+			transform: scale(1);
+		}
+
+		.button:hover {
+			transform: translateZ(30px) rotateX(10deg) rotateY(-10deg);
+			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.button:active {
+			transform: translateZ(20px) rotateX(5deg) rotateY(-5deg);
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		}
+
+		.button:active:before {
+			opacity: 0;
+			transform: scale(0.2);
+			transition: all 0.3s ease-in-out;
+		}
+
+		.button:nth-child(2) {
+			background-color: #77DD77;
+			border-color: #444;
+		}
+
+		.button:nth-child(3) {
+			background-color: #AEC6CF;
+			border-color: #444;
+		}
+
+		.logo {
+		position: absolute;
+			top: 20px;
+			left: 20px;
+			height: 100px;
+			width: 100px;
+			background-color: #2c2c2c;
+			border: 2px solid #444;
+			color: #fff;
+			text-align: center;
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: transform 0.3s;
+			transform-style: preserve-3d;
+			transform-origin: center;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		}
+		
+.logo:hover {transform: translateZ(30px) rotateX(10deg) rotateY(-10deg);
+			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.logo:active {
+			transform: translateZ(20px) rotateX(5deg) rotateY(-5deg);
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		}
+		.logo img {
+			height: 100%;
+			width: 100%;
+			object-fit: contain;
+			transition: transform 0.3s;
+			transform-style: preserve-3d;
+			transform-origin: center;
+		}
+		
+		</style>
+<body>
+	<div class="logo">
+		<img src="logo.png" alt="Hitome logo">
+		
+		</div>
+	<h1>Welcome to the Hitome Blog</h1>
+	<p>Here you'll find the latest news, updates, and behind-the-scenes info on our projects.</p>
+	<h2>Recent Posts</h2>
+	<div class="post">
+		<h3>Introducing our new project: Project X</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec rhoncus tincidunt est eget tristique. Aliquam aliquet nibh non metus commodo hendrerit.</p>
+		<a href="#" class="read-more">Read More</a>
+	</div>
+	<div class="post">
+		<h3>Behind the Scenes: Making of Project Y</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec rhoncus tincidunt est eget tristique. Aliquam aliquet nibh non metus commodo hendrerit.</p>
+		<a href="#" class="read-more">Read More</a>
+	</div>
+	<div class="post">
+		<h3>Interview with the Lead Designer of Project Z</h3>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Donec rhoncus tincidunt est eget tristique. Aliquam aliquet nibh non metus commodo hendrerit.</p>
+		<a href="#" class="read-more">Read More</a>
+	</div>
+	<div class="container">
+		<a href="about-us.html" class="button">About Us</a>
+		<a href="join-us.html" class="button">Join Us</a>
+		<a href="index.html" class="button">Home</a>
+	</div>
+</body>
+</html>
