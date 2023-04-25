@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<title>Join Us - Hitome</title>
  <link rel="stylesheet" type="css" href="styles.css">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+ <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 	<style>
 		body {
 			margin: 0;
@@ -213,21 +213,23 @@ input[type=submit] {
 	</div>
 	<h1>Join us</h1>
 	<p>Are you bored? Maybe a job could help.</p>
-<form>
-		<label for="name">Name</label>
-		<input type="text" id="name" name="name" placeholder="Your name..." required>
+	
+	<form method="post" action="submit-form.php">
+	<label for="name">Name</label>
+	<input type="text" id="name" name="name" placeholder="Your name..." required>
 
-		<label for="email">Email</label>
-		<input type="email" id="email" name="email" placeholder="Your email..." required>
+	<label for="email">Email</label>
+	<input type="email" id="email" name="email" placeholder="Your email..." required>
 
-		<label for="position">Position</label>
-		<input type="text" id="position" name="position" placeholder="The position you are applying for..." required>
+	<label for="position">Position</label>
+	<input type="text" id="position" name="position" placeholder="The position you are applying for..." required>
 
-		<label for="resume">Resume</label>
-		<textarea id="resume" name="resume" placeholder="Please provide a brief summary of your qualifications and experience..." required></textarea>
+	<label for="resume">Resume</label>
+	<textarea id="resume" name="resume" placeholder="Please provide a brief summary of your qualifications and experience..." required></textarea>
 
-		<input type="submit" value="Submit">
-	</form>
+	<input type="submit" value="Submit">
+</form>
+
 	<div class="container">
 		<a href="about-us.html" class="button">About Us</a>
 		<a href="index.html" class="button">Home</a>
