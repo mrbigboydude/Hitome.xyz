@@ -214,8 +214,12 @@ input[type=submit] {
 	<h1>Join us</h1>
 	<p>Are you bored? Maybe a job could help.</p>
 	
-	<form method="post" action="submit-form.php">
-	<label for="name">Name</label>
+	<form
+  action="https://formspree.io/f/xnqylkgz"
+  method="POST"
+>
+  <label>
+  	<label for="name">Name</label>
 	<input type="text" id="name" name="name" placeholder="Your name..." required>
 
 	<label for="email">Email</label>
@@ -228,6 +232,7 @@ input[type=submit] {
 	<textarea id="resume" name="resume" placeholder="Please provide a brief summary of your qualifications and experience..." required></textarea>
 
 	<input type="submit" value="Submit">
+  <button type="submit">Send</button>
 </form>
 
 	<div class="container">
