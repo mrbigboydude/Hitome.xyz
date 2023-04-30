@@ -2,8 +2,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Blog - Hitome</title>
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+	<title>Hitome</title>
+ <link rel="stylesheet" type="css" href="styles.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
 	<style>
 		body {
 			margin: 0;
@@ -13,14 +14,32 @@
 			font-family: sans-serif;
 		}
 
+		h1 {
+			text-align: center;
+			margin-top: 100px;
+			font-size: 48px;
+			font-weight: bold;
+			text-shadow: 2px 2px #000;
+		}
+
+		p {
+			text-align: center;
+			margin-top: 50px;
+			font-size: 24px;
+			line-height: 1.5;
+			max-width: 800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+
 		.container {
 			display: flex;
 			justify-content: center;
 			align-items: center;
-			height: 100vh;
+			margin-top: 50px;
 			perspective: 1000px;
 		}
-		
+
 		.button {
 			display: inline-block;
 			padding: 20px;
@@ -103,7 +122,6 @@
 			transform-origin: center;
 			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 		}
-		
 .logo:hover {transform: translateZ(30px) rotateX(10deg) rotateY(-10deg);
 			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
 		}
@@ -120,13 +138,13 @@
 			transform-style: preserve-3d;
 			transform-origin: center;
 		}
-		
-		</style>
+
+	</style>
+</head>
 <body>
 	<div class="logo">
 		<img src="logo.png" alt="Hitome logo">
-		
-		</div>
+	</div>
 	<h1>Welcome to the Hitome Blog</h1>
 	<p>Here you'll find the latest news, updates, and behind-the-scenes info on our projects.</p>
 	<h2>Recent Posts</h2>
@@ -148,7 +166,7 @@
 	<div class="container">
 		<a href="about-us.html" class="button">About Us</a>
 		<a href="join-us.html" class="button">Join Us</a>
-		<a href="index.html" class="button">Home</a>
+		<a href="blog.html" class="button">Blog</a>
 	</div>
 </body>
 </html>
