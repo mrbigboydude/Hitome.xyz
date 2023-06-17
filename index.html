@@ -11,11 +11,10 @@
 			background-color: #1e1e1e;
 			color: #fff;
 			font-family: sans-serif;
-			overflow: hidden;
 		}
 
 		#particles-js {
-			position: fixed;
+			position: absolute;
 			top: 0;
 			left: 0;
 			width: 100%;
@@ -94,6 +93,36 @@
 			transform-origin: center;
 		}
 
+		.button-container {
+			display: flex;
+			justify-content: center;
+			margin-top: 30px;
+		}
+
+		.button {
+			margin: 0 10px;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 20px;
+			background-color: #2c2c2c;
+			color: #fff;
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
+
+		.button:hover {
+			transform: translateZ(10px);
+			box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+		}
+
+		.button:active {
+			transform: translateZ(5px);
+			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+		}
+
 		@keyframes fade-in {
 			from {
 				opacity: 0;
@@ -110,18 +139,41 @@
 		<div class="logo">
 			<img src="logo.png" alt="Hitome logo">
 		</div>
-		<h1>Coming soon!</h1>
-		<p>Hitome studios is coming soon!</p>
+		<h1>Welcome</h1>
+		<p>Welcome to Hitome Studios</p>
+		<div class="button-container">
+			<button class="button" onclick="scrollToBottom()"><img src="white-arrow.png" alt="Scroll" height="30"></button>
+		</div>
 	</div>
 	<div style="text-align:center;">
 		<hr style="border:none; border-top:1px solid #ccc; margin:20px auto;">
 		<ul style="list-style:none; display:inline-block;">
 			<li style="display:inline-block; margin-right:20px;"><a href="mailto:support@hitome.xyz"><img src="email.png" alt="Email" height="30"></a></li>
 			<li style="display:inline-block; margin-right:20px;"><a href="https://twitter.com/hitomestudios"><img src="twitter.png" alt="Twitter" height="30"></a></li>
+			<li style="display:inline-block;margin-right:20px;"><a href="https://www.brickplanet.com/guilds/691/hitome-studios"><img src="brickplanet.png" alt="Brickplanet" height="30"></a></li>
 			<li style="display:inline-block; margin-right:20px;"><a href="https://discord.gg/E4XsGgkJsW"><img src="discord.png" alt="Discord" height="30"></a></li>
 			<li style="display:inline-block;"><a href="https://www.youtube.com/@hitome-studios"><img src="youtube.png" alt="YouTube" height="30"></a></li>
 		</ul>
 	</div>
+	
+	<script>
+		function scrollToBottom() {
+			window.scrollTo({
+				top: document.body.scrollHeight,
+				behavior: 'smooth'
+			});
+		}
+	</script>
+
+	<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" style="position: absolute; bottom: 0;">
+		<path fill="#ffffff" fill-opacity="1" d="M0,224L60,224C120,224,240,224,360,202.7C480,181,600,139,720,101.3C840,64,960,32,1080,26.7C1200,21,1320,43,1380,53.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+		<svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#1e1e1e" fill-opacity="1" d="M0,288L60,293.3C120,299,240,309,360,288C480,267,600,213,720,197.3C840,181,960,203,1080,202.7C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+		</svg>
+		<svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#1e1e1e" fill-opacity="1" d="M0,288L60,293.3C120,299,240,309,360,288C480,267,600,213,720,197.3C840,181,960,203,1080,202.7C1200,203,1320,181,1380,170.7L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+		</svg>
+	</svg>
 
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 	<script>
@@ -136,22 +188,14 @@
 				move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", attract: { enable: false, rotateX: 600, rotateY: 1200 } }
 			},
 			interactivity: {
-				detect_on: "window",
-				events: {
-					onhover: { enable: true, mode: "repulse" },
-					onclick: { enable: true, mode: "push" },
-					resize: true
-				},
-				modes: {
-					grab: { distance: 400, line_linked: { opacity: 1 } },
-					bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
-					repulse: { distance: 200, duration: 0.4 },
-					push: { particles_nb: 4 },
-					remove: { particles_nb: 2 }
-				}
+				detect_on: "canvas",
+				events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true },
+				modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } }
 			},
 			retina_detect: true
 		});
 	</script>
 </body>
 </html>
+
+
