@@ -19,7 +19,7 @@
 			left: 0;
 			width: 100%;
 			height: 100%;
-			z-index: -1;
+			z-index: 0;
 		}
 
 		.container {
@@ -30,7 +30,7 @@
 			align-items: center;
 			height: 100vh;
 			flex-direction: column;
-			margin-bottom: 450px; /* Added margin to increase the space */
+			margin-bottom: 600px
 		}
 
 		h1 {
@@ -73,6 +73,7 @@
 			transform-origin: center;
 			box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 			z-index: 1;
+			<a href="./">
 		}
 
 		.logo:hover {
@@ -132,6 +133,44 @@
 				opacity: 1;
 			}
 		}
+		
+		.rectangle {
+			  position: absolute;
+            top: 700px; /* Adjust the top value as needed */
+            left: 18%;
+            width: 65%;
+            height: 450px;
+            background-color: #000000;
+            z-index: 1;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: #fff;
+            animation: fade-in 1s ease-in-out forwards;
+        }
+		
+        .rectangle h1 {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+        }
+
+        .rectangle p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    
+    .rectangle p {
+        font-size: 18px;
+        line-height: 1.5;
+        text-align: center;
+    }
 	</style>
 </head>
 <body>
@@ -140,15 +179,23 @@
 		<div class="logo">
 			<img src="logo.png" alt="Hitome logo">
 		</div>
-		<h1>Coming soon</h1>
-		<p>Hitome Studios is coming soon</p>
+		<h1>Welcome</h1>
+		<p>Welcome to Hitome Studios</p>
 		<div class="button-container">
 			<button class="button" onclick="scrollToBottom()"><img src="white-arrow.png" alt="Scroll" height="30"></button>
 		</div>
 	</div>
+	<div class="rectangle"></div>
+	<div class="rectangle">
+    <h1>Hitome Studios isnt done just yet!</h1>
+    <p>Hitome Studios is being worked on daily and should be released by 7/3/2023</p>
+    <p>We will be adding Forums, Profiles, Games, 3D elements and more!</p>
+</div>
+
 	<div style="text-align:center;">
 		<ul style="list-style:none; display:inline-block;">
 			<li style="display:inline-block; margin-right:20px;"><a href="mailto:support@hitome.xyz"><img src="email.png" alt="Email" height="30"></a></li>
+			<li style="display:inline-block; margin-right:20px;"><a href="https://github.com/mrbigboydude/Hitome.xyz"><img src="github.png" alt="Github" height="35"></a></li>
 			<li style="display:inline-block; margin-right:20px;"><a href="https://twitter.com/hitomestudios"><img src="twitter.png" alt="Twitter" height="30"></a></li>
 			<li style="display:inline-block;margin-right:20px;"><a href="https://www.brickplanet.com/guilds/691/hitome-studios"><img src="brickplanet.png" alt="Brickplanet" height="30"></a></li>
 			<li style="display:inline-block; margin-right:20px;"><a href="https://discord.gg/E4XsGgkJsW"><img src="discord.png" alt="Discord" height="30"></a></li>
@@ -176,20 +223,60 @@
 	</svg>
 
 	<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-	<script>
-		particlesJS("particles-js", {
-			particles: {
-				number: { value: 80, density: { enable: true, value_area: 800 } },
-				color: { value: "#ffffff" },
-				shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 }, image: { src: "img/github.svg", width: 100, height: 100 } },
-				opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
-				size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
-				line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
-				move: { enable: true, speed: 6, direction: "none", random: false, straight: false, out_mode: "out", attract: { enable: false, rotateX: 600, rotateY: 1200 } }
-			},
-			interactivity: { detect_on: "canvas", events: { onhover: { enable: true, mode: "repulse" }, onclick: { enable: true, mode: "push" }, resize: true }, modes: { grab: { distance: 400, line_linked: { opacity: 1 } }, bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 }, repulse: { distance: 200, duration: 0.4 }, push: { particles_nb: 4 }, remove: { particles_nb: 2 } } },
-			retina_detect: true
-		});
-	</script>
+<script>
+    particlesJS("particles-js", {
+        particles: {
+            number: { value: 80, density: { enable: true, value_area: 800 } },
+            color: { value: "#ffffff" },
+            shape: { type: "circle", stroke: { width: 0, color: "#000000" }, polygon: { nb_sides: 5 }, image: { src: "img/github.svg", width: 100, height: 100 } },
+            opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+            size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+            line_linked: { enable: true, distance: 150, color: "#ffffff", opacity: 0.4, width: 1 },
+            move: {
+                enable: true,
+                speed: 6,
+                direction: "none",
+                random: false,
+                straight: false,
+                out_mode: "out",
+                attract: { enable: false, rotateX: 600, rotateY: 1200 }
+            }
+        },
+        interactivity: {
+            detect_on: "canvas",
+            events: {
+                onhover: {
+                    enable: true,
+                    mode: "repulse"
+                },
+                onclick: {
+                    enable: true,
+                    mode: "push"
+                },
+                resize: true
+            },
+            modes: {
+                grab: {
+                    distance: 400,
+                    line_linked: { opacity: 1 }
+                },
+                bubble: {
+                    distance: 400,
+                    size: 40,
+                    duration: 2,
+                    opacity: 8,
+                    speed: 3
+                },
+                repulse: {
+                    distance: 200,
+                    duration: 0.4
+                },
+                push: { particles_nb: 4 },
+                remove: { particles_nb: 2 }
+            }
+        },
+        retina_detect: true
+    });
+</script>
 </body>
 </html>
